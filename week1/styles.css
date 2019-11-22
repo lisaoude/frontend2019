@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0em;
+    padding: 0em;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+
+/*NAV*/
+
+nav {
+    background: #01689B;
+    padding: 5px 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px white solid;
+    padding: 5px 0px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    font-size: 19px;
+    padding: 5px 0px;
+}
+
+.menu li a {
+    display: block;
+}
+
+.home a {
+    font-size: 22px;
+}
+
+
+
+/* mobiel menu*/
+.menu {
+    display: flex;
+    flex-wrap: warp;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+.toggle {
+    order: 1;
+}
+
+.home {
+    order: 2;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    order: 3;
+}
+
+
+
+
+
+
+
+.toggle {
+    cursor: pointer;
+}
+
+.bars {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+}
+
+.bars::before,
+.bars::after {
+    background: #999;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    width: 18px;
+    position: absolute;
+}
+
+.bars::before {
+    top: 5px;
+}
+
+.bars::before {
+    top: -5px;
+}
+
+
+
+
+
+/* Logo & Wrapper*/
+
+.logo {
+    display: flex;
+    justify-content: center;
+    height: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/***************************************************************************
+                            Mobiel menu
+***************************************************************************/
+
+
+
+
+
+
+/*
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header nav ul a {
+    text-decoration: none;
+    color: black;
+    padding: 1em 4em;
+}
+
+header nav ul a:hover {
+    text-decoration: underline;
+}
+
+.home {
+    flex-grow: 1;
+}
+*/
+
+/***************************************************************************
+                            Laptop menu
+***************************************************************************/
+@media all and (min-width:1000px) {
+    .logo {
+        height: 5em;
+        width: auto;
+    }
+
+}
