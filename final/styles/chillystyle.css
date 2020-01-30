@@ -1,0 +1,1931 @@
+/* ALGEMEEN */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+legend,
+label {
+    color: #272727;
+}
+
+/************************************ MOBIELE VERSIE ************************************/
+@media screen and (min-width: 100px) and (max-width: 412px) {
+    /****************************************************************************************/
+
+    /* ALGEMEEN */
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    h1 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    h3 {
+        font-size: 3.25em;
+        font-weight: 400;
+        color: #ffffff;
+    }
+
+    h4 {
+        font-size: 0.6rem;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    /******************************* HEADER *******************************/
+    /* HEADER */
+    body header {
+        background-color: #fff;
+        border: 1px #EAEAEA solid;
+        width: 100vw;
+        z-index: 12;
+        position: fixed;
+        transition: 0.2s;
+    }
+
+    /* HEADER CONTAINER */
+    header div:nth-of-type(1) {
+        position: relative;
+        width: 100%;
+        height: 6rem;
+    }
+
+    /* HAMBURGER RUIMTE */
+    .hamburger {
+        position: relative;
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    /* HAMBURGER STREEPJE MIDDEN */
+    span {
+        display: block;
+        background: #272727;
+        height: 2px;
+        width: 5%;
+        border-radius: 25px;
+        margin-left: 2rem;
+    }
+
+    /* HAMBURGER STREEPJE BOVEN EN ONDER */
+    span::before,
+    span::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background: #272727;
+        width: 5%;
+        height: 2px;
+        border-radius: 25px;
+        left: 2rem;
+    }
+
+    /* POSITIE STREEPJE BOVEN */
+    span::before {
+        top: 41px;
+    }
+
+    /* POSITIE STREEPJE ONDER */
+    span::after {
+        bottom: 41px;
+    }
+
+    /* HAMBURGER TRANSITIE */
+    .hamburger.active span {
+        background: rgba(0, 0, 0, 0);
+        transition: .5s;
+    }
+
+    .hamburger.active span::before {
+        transform: rotate(135deg);
+        top: 46px;
+    }
+
+    .hamburger.active span::after {
+        top: 46px;
+        transform: rotate(225deg);
+    }
+
+    nav.active {
+        transform: translateX(0);
+    }
+
+    /* LOGO */
+    body header div img:nth-of-type(1) {
+        position: absolute;
+        width: 27%;
+        height: auto;
+        left: 35%;
+        top: 2rem;
+    }
+
+    /* MANDJE */
+    body header div img:nth-of-type(2) {
+        position: absolute;
+        width: 7%;
+        height: auto;
+        right: 2rem;
+        top: 2rem;
+    }
+
+
+    /******************************* NAVIGATIE *******************************/
+    nav {
+        position: absolute;
+        transform: translateX(-100%);
+        background-color: #fff;
+        width: 100%;
+        height: 60rem;
+        display: flex;
+        transition: .3s ease-in-out;
+    }
+
+    header nav ul {
+        list-style: none;
+        overflow: hidden;
+        background-color: #fff;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    header nav ul li a {
+        display: block;
+        color: #000;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1.3em;
+        text-decoration: none;
+        padding: 36px 20px;
+        border-bottom: 1px #EAEAEA solid;
+    }
+
+
+
+    /******************************* PAGINA 1 *******************************/
+
+    /********************* EERSTE FOTO *********************/
+    /* CONTAINER VOOR EERSTE FOTOS EN BUTTON */
+    main div:nth-of-type(1) {
+        position: relative;
+        width: 96%;
+        height: 58rem;
+        margin-left: 2%;
+    }
+
+    /* EERSTE FOTO KLEIN */
+    main div img:nth-of-type(1) {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 6.1rem;
+    }
+
+    /* EERSTE FOTO GROOT*/
+    main div img:nth-of-type(2) {
+        display: none;
+    }
+
+    /* SHOP NOW BUTTON */
+    main div button:nth-of-type(1) {
+        position: absolute;
+        top: 43.6rem;
+        left: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 1rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        z-index: 3;
+    }
+
+    /********************* EERSTE SLIDER *********************/
+    /* CONTAINER EERSTE SLIDER */
+    main section:nth-of-type(1) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 30rem;
+        margin-left: 5%;
+    }
+
+    main section:nth-of-type(1) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 61%;
+        height: 300px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    main section:nth-of-type(1) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST*/
+    /* DIT MOET EVEN MET EEN PAAR STUKJES PLAKBAND
+    WANT HIJ DOET NIKS MET EEN MAX WIDTH
+    HEB JORDY INGESCHAKELD EN OOK DIE LUKTE HET NIET
+    DUS ALLES AAN GEDAAN !!1!!1*/
+    main section:nth-of-type(1) figure div {
+        position: absolute;
+        top: 5rem;
+    }
+
+    main section:nth-of-type(1) figure div h1 {
+        height: 1.5rem;
+    }
+
+    main section:nth-of-type(1) figure div h1:nth-of-type(3) {
+        margin-bottom: 1.5rem;
+    }
+
+    main section:nth-of-type(1) figure div p:nth-of-type(1) {
+        height: 1.1rem;
+    }
+
+    main section:nth-of-type(1) figure div p:nth-of-type(2) {
+        margin-bottom: 1.1rem;
+    }
+
+
+    /********************* REVIEWS *********************/
+    main section:nth-of-type(2) {
+        height: 20rem;
+    }
+
+    main section:nth-of-type(2) img {
+        position: absolute;
+        left: 8rem;
+        width: 10rem;
+        height: auto;
+    }
+
+    main section:nth-of-type(2) img:nth-of-type(2) {
+        display: none;
+    }
+
+
+    /********************* KLEUR VAKKEN EN TEKST *********************/
+    /* BLAUW VAK FOTO */
+    main section:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 23rem;
+    }
+
+    main section:nth-of-type(3) img {
+        position: absolute;
+        left: 2rem;
+        width: 22rem;
+    }
+
+    main section:nth-of-type(3) h3 {
+        position: absolute;
+        top: 14rem;
+        left: 7rem;
+        z-index: 10;
+    }
+
+    /* BLAUW VAK TEKST */
+    main article:nth-of-type(1) {
+        position: relative;
+        left: 2rem;
+        width: 80%;
+        height: 37rem;
+    }
+
+    main article:nth-of-type(1) h1 {
+        position: absolute;
+        top: 14rem;
+        width: 12rem;
+        line-height: 1.9rem;
+    }
+
+    main article:nth-of-type(1) p:nth-of-type(1) {
+        position: absolute;
+        top: 19rem;
+    }
+
+    main article:nth-of-type(1) p:nth-of-type(2) {
+        position: absolute;
+        top: 24rem;
+    }
+
+
+    /* ROZE VAK FOTO */
+    main section:nth-of-type(4) {
+        position: relative;
+        width: 100%;
+        height: 23rem;
+    }
+
+    main section:nth-of-type(4) img {
+        position: absolute;
+        left: 2rem;
+        width: 22rem;
+    }
+
+    main section:nth-of-type(4) h3 {
+        position: absolute;
+        top: 14rem;
+        left: 10rem;
+        z-index: 10;
+    }
+
+    /* ROZE VAK TEKST */
+    main article:nth-of-type(2) {
+        position: relative;
+        left: 2rem;
+        width: 80%;
+        height: 37rem;
+    }
+
+    main article:nth-of-type(2) h1 {
+        position: absolute;
+        top: 14rem;
+        width: 12rem;
+        line-height: 1.9rem;
+    }
+
+    main article:nth-of-type(2) p:nth-of-type(1) {
+        position: absolute;
+        top: 19rem;
+    }
+
+    main article:nth-of-type(2) p:nth-of-type(2) {
+        position: absolute;
+        top: 23rem;
+    }
+
+
+    /* GROEN VAK FOTO */
+    main section:nth-of-type(5) {
+        position: relative;
+        width: 100%;
+        height: 23rem;
+    }
+
+    main section:nth-of-type(5) img {
+        position: absolute;
+        left: 2rem;
+        width: 22rem;
+    }
+
+    main section:nth-of-type(5) h3 {
+        position: absolute;
+        top: 14rem;
+        left: 7rem;
+        z-index: 10;
+    }
+
+    /* GROEN VAK TEKST */
+    main article:nth-of-type(3) {
+        position: relative;
+        left: 2rem;
+        width: 80%;
+        height: 28rem;
+    }
+
+    main article:nth-of-type(3) h1 {
+        position: absolute;
+        top: 14rem;
+        width: 12rem;
+        line-height: 1.9rem;
+    }
+
+    main article:nth-of-type(3) p {
+        position: absolute;
+        top: 19rem;
+    }
+
+
+    /********************* SHOP *********************/
+    /* SHOP CONTAINER */
+    main section:nth-of-type(6) {
+        position: relative;
+        background-color: #FFBACC;
+        width: 100%;
+        height: 13em;
+    }
+
+    /* SHOP TEKST 1 */
+    main section:nth-of-type(6) h1:nth-of-type(1) {
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+        color: #ffffff;
+    }
+
+    /* SHOP TEKST 2*/
+    main section:nth-of-type(6) h1:nth-of-type(2) {
+        position: absolute;
+        top: 3.5rem;
+        left: 2rem;
+        color: #FEDDE6;
+    }
+
+    /* SHOP FOTO FLES*/
+    main section:nth-of-type(6) img {
+        position: absolute;
+        max-width: 7.5rem;
+        top: 7rem;
+        left: 9.5rem;
+    }
+
+
+    /* SHOP FOTO CONTAINER*/
+    main div:nth-of-type(2) {
+        position: relative;
+        width: 86%;
+        height: 34em;
+        left: 1rem;
+    }
+
+    /* SHOP FOTO */
+    main div:nth-of-type(2) img {
+        position: absolute;
+        top: 14rem;
+        left: 1rem;
+        max-width: 100%;
+    }
+
+    main div:nth-of-type(2) p:nth-of-type(1) {
+        display: none;
+    }
+
+    /* SHOP CONTAINER BUTTON EN TEKST*/
+    main div:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 11rem;
+    }
+
+    /* SHOP BUTTON */
+    main div:nth-of-type(3) button {
+        position: absolute;
+        top: 4.5rem;
+        left: 16.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.9rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px #C9C9C9;
+        z-index: 6;
+    }
+
+    /* SHOP TEKST */
+    main div:nth-of-type(3) h4 {
+        position: absolute;
+        top: 2rem;
+        left: 6rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    /********************* RETURNS *********************/
+    /* RETURN CONTAINER */
+    main section:nth-of-type(7) {
+        position: relative;
+        width: 50%;
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-left: 6rem;
+        margin-top: 3rem;
+    }
+
+    /* RETURN LINKS */
+    main section:nth-of-type(7) a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+
+
+    /********************* TWEEDE SLIDER *********************/
+    /* CONTAINER TWEEDE SLIDER */
+    main section:nth-of-type(8) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 30rem;
+        margin-left: 5%;
+    }
+
+    main section:nth-of-type(8) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 61%;
+        height: 300px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    main section:nth-of-type(8) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST*/
+    /* WEDEROM EEN GEVALLETJE PLAKBANDJE 
+    JORDY LUKTE DIT OOK NIET JOEJOE */
+    main section:nth-of-type(8) figure div {
+        position: absolute;
+        top: 5rem;
+        width: 150px;
+    }
+
+    main section:nth-of-type(8) figure div h1 {
+        height: 1.6rem;
+    }
+
+    main section:nth-of-type(8) figure div h1:nth-of-type(2) {
+        margin-bottom: 1.7rem;
+    }
+
+    main section:nth-of-type(8) figure div a:nth-of-type(1) {
+        height: 1.1rem;
+    }
+
+
+    /********************* FORMULIER *********************/
+    main section:nth-of-type(9) form {
+        display: grid;
+        width: 20rem;
+        height: 29rem;
+        margin-left: 2rem;
+    }
+
+    main section:nth-of-type(9) form fieldset {
+        margin: 1rem;
+        border: 0;
+    }
+
+    /* SOORT VAN HEADING */
+    main section:nth-of-type(9) form fieldset legend {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    /*CONTAINER LABEL EN INPUT*/
+    main section:nth-of-type(9) form p {
+        margin: 0 auto;
+    }
+
+    /* LABEL */
+    main section:nth-of-type(9) form label {
+        display: block;
+        font-size: 1rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    /* INPUT */
+    main section:nth-of-type(9) form input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        border: 1px #EAEAEA solid;
+        border-radius: 25px;
+        padding-left: 1rem;
+    }
+
+    /* FORM BUTTON */
+    main section:nth-of-type(9) form button {
+        width: 20rem;
+        height: 40px;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        margin-top: 3rem;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+
+
+    /********************* SOCIAL LINKS *********************/
+    /* CONTAINER SOCIAL LINKS */
+    main article:nth-of-type(4) {
+        display: flex;
+        justify-content: space-between;
+        width: 12rem;
+        height: 8rem;
+        margin-left: 7rem;
+    }
+
+    /* SOCIAL LINKS FOTO */
+    main article:nth-of-type(4) img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /********************* FOOTER *********************/
+    /* FOOTER CONTAINER */
+    footer {
+        position: relative;
+        width: 46%;
+        height: 8rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    /* LINKS */
+    footer a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem
+    }
+
+
+
+    /******************************* PAGINA 2 *******************************/
+    /********************* EERSTE FOTO PAG2 *********************/
+    /* CONTAINER VOOR EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) {
+        position: relative;
+        width: 96%;
+        height: 45rem;
+        left: 0;
+    }
+
+    /* EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) img:nth-of-type(1) {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 4rem;
+    }
+
+    /* EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) img:nth-of-type(2) {
+        display: none;
+    }
+
+    /********************* SLIDER *********************/
+    /* CONTAINER SLIDER PAG2 */
+    .pagina2 section:nth-of-type(1) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 22rem;
+        margin-bottom: 10rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 61%;
+        height: 300px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST PAG2*/
+    /* DIT MOET WEER MET EEN PAAR STUKJES PLAKBAND NET ALS DE VORIGE SLIDERS */
+    /* HIER GAAT DE 3E P OOK RANDOM EEN STUK NAAR BENEDEN DUS GEFIXT MET MARGIN*/
+    .pagina2 section:nth-of-type(1) figure div {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div h1 {
+        height: 1.5rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div h1:nth-of-type(2) {
+        margin-bottom: 1rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(3) {
+        margin-top: -1rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(7) {
+        margin-top: 1rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(11) {
+        margin-bottom: 1rem;
+    }
+
+
+    /* KERST 1 VAK FOTO */
+    .pagina2 section:nth-of-type(2) {
+        position: relative;
+        width: 100%;
+        height: 23rem;
+    }
+
+    .pagina2 section:nth-of-type(2) img {
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        width: 22rem;
+    }
+
+    .pagina2 section:nth-of-type(2) h3 {
+        position: absolute;
+        top: 14rem;
+        left: 7rem;
+        z-index: 10;
+    }
+
+    /* KERST 1 VAK TEKST */
+    .pagina2 article:nth-of-type(1) {
+        position: relative;
+        left: 2rem;
+        width: 80%;
+        height: 37rem;
+    }
+
+    .pagina2 article:nth-of-type(1) h1 {
+        position: absolute;
+        top: 14rem;
+        width: 14rem;
+        line-height: 1.9rem;
+    }
+
+    .pagina2 article:nth-of-type(1) p:nth-of-type(1) {
+        position: absolute;
+        top: 17rem;
+    }
+
+    .pagina2 article:nth-of-type(1) p:nth-of-type(2) {
+        position: absolute;
+        top: 21rem;
+    }
+
+
+    /********************* SHOP PAG2 *********************/
+    /* SHOP CONTAINER PAG2 */
+    .pagina2 section:nth-of-type(3) {
+        position: relative;
+        background-color: #313131;
+        width: 100%;
+        height: 13em;
+    }
+
+    /* SHOP TEKST 1 PAG2 */
+    .pagina2 section:nth-of-type(3) h1:nth-of-type(1) {
+        position: absolute;
+        top: 1.5rem;
+        left: 2rem;
+        color: #ffffff;
+    }
+
+    /* SHOP TEKST 2 PAG2 */
+    .pagina2 section:nth-of-type(3) h1:nth-of-type(2) {
+        position: absolute;
+        top: 3.5rem;
+        left: 2rem;
+        color: #989898;
+    }
+
+    /* SHOP FOTO FLES PAG2 */
+    .pagina2 section:nth-of-type(3) img {
+        position: absolute;
+        max-width: 7.5rem;
+        top: 7rem;
+        left: 9.5rem;
+    }
+
+    /* SHOP FOTO CONTAINER PAG2 */
+    .pagina2 div:nth-of-type(2) {
+        position: relative;
+        width: 86%;
+        height: 34em;
+        left: 1rem;
+    }
+
+    /* SHOP FOTO PAG2 */
+    .pagina2 div:nth-of-type(2) img {
+        position: absolute;
+        top: 14rem;
+        max-width: 100%;
+    }
+
+    .pagina2 div:nth-of-type(2) p:nth-of-type(1) {
+        display: none;
+    }
+
+
+    /* SHOP CONTAINER BUTTON EN TEKST PAG2 */
+    .pagina2 div:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 11rem;
+    }
+
+    /* SHOP BUTTON PAG2 */
+    .pagina2 div:nth-of-type(3) button {
+        position: absolute;
+        top: 4.5rem;
+        left: 16.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.9rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px #C9C9C9;
+        z-index: 6;
+    }
+
+    /* SHOP TEKST PAG2 */
+    .pagina2 div:nth-of-type(3) h4 {
+        position: absolute;
+        top: 2rem;
+        left: 6rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    /********************* RETURNS PAG2 *********************/
+    /* RETURN CONTAINER PAG2 */
+    .pagina2 section:nth-of-type(4) {
+        position: relative;
+        width: 50%;
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        left: 6.5rem;
+        margin: 3rem 0;
+    }
+
+    /* RETURN LINKS PAG2 */
+    .pagina2 section:nth-of-type(4) a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+
+
+    /********************* FORMULIER PAG2 *********************/
+    .pagina2 section:nth-of-type(5) form {
+        display: grid;
+        width: 20rem;
+        height: 30rem;
+        margin-left: 2rem;
+    }
+
+    .pagina2 section:nth-of-type(5) form fieldset {
+        margin: 1rem;
+        border: 0;
+    }
+
+    /* SOORT VAN HEADING PAG2 */
+    .pagina2 section:nth-of-type(5) form fieldset legend {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    /*CONTAINER LABEL EN INPUT PAG2 */
+    .pagina2 section:nth-of-type(5) form p {
+        margin: 0 auto;
+    }
+
+    /* LABEL PAG2 */
+    .pagina2 section:nth-of-type(5) form label {
+        display: block;
+        font-size: 1rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    /* INPUT PAG2 */
+    .pagina2 section:nth-of-type(5) form input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        border: 1px #EAEAEA solid;
+        border-radius: 25px;
+        padding-left: 1rem;
+    }
+
+    /* FORM BUTTON PAG2 */
+    .pagina2 section:nth-of-type(5) form button {
+        width: 20rem;
+        height: 40px;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        margin-top: 3rem;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+
+
+    /********************* SOCIAL LINKS PAG2 *********************/
+    /* CONTAINER SOCIAL LINKS PAG2 */
+    .pagina2 article:nth-of-type(2) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 12rem;
+        height: 15rem;
+        left: 7rem;
+    }
+
+    /* SOCIAL LINKS FOTO PAG2 */
+    .pagina2 article:nth-of-type(2) img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /********************* FOOTER PAG2 *********************/
+    /* FOOTER CONTAINER PAG2 */
+    .pagina2 footer {
+        position: relative;
+        width: 46%;
+        height: 8rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+    }
+
+    /* LINKS PAG2 */
+    .pagina2 footer a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem
+    }
+}
+
+
+
+/************************************ LAPTOP VERSIE ************************************/
+@media screen and (min-width: 1500px) and (max-width: 1550px) {
+    /***********************************************************************************/
+
+    /* ALGEMEEN */
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a {
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    h3 {
+        font-size: 7em;
+        font-weight: 400;
+        color: #ffffff;
+        letter-spacing: -9px;
+    }
+
+    h4 {
+        font-size: 0.6rem;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    p {
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+
+    /******************************* HEADER *******************************/
+    /* HEADER */
+    body header {
+        background-color: #fff;
+        border: 1px #EAEAEA solid;
+        width: 100vw;
+        z-index: 12;
+        position: fixed;
+        transition: 0.2s;
+    }
+
+    /* HEADER CONTAINER */
+    header div:nth-of-type(1) {
+        position: relative;
+        width: 100%;
+        height: 7rem;
+    }
+
+    /* LOGO */
+    body header div img:nth-of-type(1) {
+        position: absolute;
+        width: 11%;
+        height: auto;
+        left: 8rem;
+        top: 2rem;
+    }
+
+    /* MANDJE */
+    body header div img:nth-of-type(2) {
+        position: absolute;
+        width: 2.5%;
+        height: auto;
+        right: 8rem;
+        top: 2.3rem;
+    }
+
+
+    /******************************* NAVIGATIE *******************************/
+    nav {
+        position: absolute;
+        width: 100%;
+        display: flex;
+    }
+
+    header nav ul {
+        position: absolute;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        top: -4.2rem;
+        left: 25rem;
+    }
+
+    header nav ul a {
+        display: block;
+        color: #000;
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-weight: 500;
+        font-size: 1em;
+        text-decoration: none;
+    }
+
+    .hide {
+        visibility: hidden;
+    }
+
+    header nav ul div {
+        position: absolute;
+        left: -13rem;
+        display: flex;
+        flex-direction: row;
+        max-width: 20rem;
+        justify-content: space-between;
+    }
+
+
+
+    /******************************* PAGINA 1 *******************************/
+    /********************* EERSTE FOTO *********************/
+    /* CONTAINER VOOR EERSTE FOTOS EN BUTTON */
+    main div:nth-of-type(1) {
+        position: relative;
+        width: 97%;
+        height: 58rem;
+        margin-left: 1.5%;
+    }
+
+    /* EERSTE FOTO KLEIN */
+    main div img:nth-of-type(1) {
+        display: none;
+    }
+
+    /* EERSTE FOTO GROOT */
+    main div img:nth-of-type(2) {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 7rem;
+    }
+
+    /* SHOP NOW BUTTON */
+    main div button:nth-of-type(1) {
+        position: absolute;
+        top: 36rem;
+        left: 2rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 1rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        z-index: 3;
+    }
+
+    /********************* EERSTE SLIDER *********************/
+    /* CONTAINER EERSTE SLIDER */
+    main section:nth-of-type(1) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 35rem;
+        margin-left: 5%;
+        margin-bottom: 10rem;
+    }
+
+    main section:nth-of-type(1) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 28%;
+        height: 200px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    main section:nth-of-type(1) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST*/
+    /* DIT MOET EVEN MET EEN PAAR STUKJES PLAKBAND
+    WANT HIJ DOET NIKS MET EEN MAX WIDTH
+    HEB JORDY INGESCHAKELD EN OOK DIE LUKTE HET NIET
+    DUS ALLES AAN GEDAAN !!1!!1 */
+    main section:nth-of-type(1) figure div {
+        position: absolute;
+        top: 5rem;
+    }
+
+    main section:nth-of-type(1) figure div h1 {
+        height: 2.7rem;
+    }
+
+    main main section:nth-of-type(1) figure div h1:nth-of-type(3) {
+        margin-bottom: 1.7rem;
+    }
+
+    main section:nth-of-type(1) figure div p:nth-of-type(1) {
+        margin-bottom: 1.7rem;
+    }
+
+
+    /********************* REVIEWS *********************/
+    main section:nth-of-type(2) {
+        height: 20rem;
+    }
+
+    main section:nth-of-type(2) img:nth-of-type(1) {
+        position: absolute;
+        left: 8rem;
+        width: 10rem;
+        height: auto;
+    }
+
+    main section:nth-of-type(2) img:nth-of-type(2) {
+        position: absolute;
+        left: 23rem;
+        width: 62rem;
+        height: auto;
+    }
+
+
+    /********************* KLEUR VAKKEN EN TEKST *********************/
+    /* BLAUW VAK FOTO */
+    main section:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 14rem;
+    }
+
+    main section:nth-of-type(3) img {
+        position: absolute;
+        right: 12rem;
+        width: 30rem;
+    }
+
+    main section:nth-of-type(3) h3 {
+        position: absolute;
+        top: 17.5rem;
+        right: 16rem;
+        z-index: 10;
+    }
+
+    /* BLAUW VAK TEKST */
+    main article:nth-of-type(1) {
+        position: relative;
+        left: 17rem;
+        width: 18%;
+        height: 37rem;
+    }
+
+    main article:nth-of-type(1) h1 {
+        position: absolute;
+        top: 0rem;
+        width: 14rem;
+        line-height: 2.5rem;
+    }
+
+    main article:nth-of-type(1) p:nth-of-type(1) {
+        position: absolute;
+        top: 7rem;
+    }
+
+    main article:nth-of-type(1) p:nth-of-type(2) {
+        position: absolute;
+        top: 13rem;
+    }
+
+
+    /* ROZE VAK FOTO */
+    main section:nth-of-type(4) {
+        position: relative;
+        width: 100%;
+        height: 14rem;
+    }
+
+    main section:nth-of-type(4) img {
+        position: absolute;
+        left: 12rem;
+        width: 30rem;
+    }
+
+    main section:nth-of-type(4) h3 {
+        position: absolute;
+        top: 18rem;
+        left: 20rem;
+        z-index: 10;
+    }
+
+    /* ROZE VAK TEKST */
+    main article:nth-of-type(2) {
+        position: relative;
+        left: 54rem;
+        width: 18%;
+        height: 37rem;
+    }
+
+    main article:nth-of-type(2) h1 {
+        position: absolute;
+        top: 0rem;
+        width: 20rem;
+        line-height: 2.5rem;
+    }
+
+    main article:nth-of-type(2) p:nth-of-type(1) {
+        position: absolute;
+        top: 7rem;
+    }
+
+    main article:nth-of-type(2) p:nth-of-type(2) {
+        position: absolute;
+        top: 12rem;
+    }
+
+
+    /* GROEN VAK FOTO */
+    main section:nth-of-type(5) {
+        position: relative;
+        width: 100%;
+        height: 14rem;
+    }
+
+    main section:nth-of-type(5) img {
+        position: absolute;
+        right: 12rem;
+        width: 30rem;
+    }
+
+    main section:nth-of-type(5) h3 {
+        position: absolute;
+        top: 17.8rem;
+        right: 16rem;
+        z-index: 10;
+    }
+
+    /* GROEN VAK TEKST */
+    main article:nth-of-type(3) {
+        position: relative;
+        left: 17rem;
+        width: 19%;
+        height: 37rem;
+    }
+
+    main article:nth-of-type(3) h1 {
+        position: absolute;
+        top: 0rem;
+        width: 20rem;
+        line-height: 2.5rem;
+    }
+
+    main article:nth-of-type(3) p {
+        position: absolute;
+        top: 7rem;
+    }
+
+
+    /********************* SHOP *********************/
+    /* SHOP CONTAINER */
+    main section:nth-of-type(6) {
+        position: relative;
+        background-color: #FFBACC;
+        width: 50%;
+        height: 50em;
+    }
+
+    /* SHOP TEKST 1 */
+    main section:nth-of-type(6) h1:nth-of-type(1) {
+        position: absolute;
+        top: 4.5rem;
+        left: 8rem;
+        color: #ffffff;
+    }
+
+    /* SHOP TEKST 2*/
+    main section:nth-of-type(6) h1:nth-of-type(2) {
+        position: absolute;
+        top: 7rem;
+        left: 8rem;
+        color: #FEDDE6;
+    }
+
+    /* SHOP FOTO FLES*/
+    main section:nth-of-type(6) img {
+        position: absolute;
+        max-width: 16rem;
+        top: 7rem;
+        left: 40.55rem;
+    }
+
+    /* SHOP FOTO CONTAINER*/
+    main div:nth-of-type(2) {
+        position: relative;
+        width: 86%;
+        height: 34em;
+        left: 1rem;
+    }
+
+    /* SHOP FOTO */
+    main div:nth-of-type(2) img {
+        position: absolute;
+        top: -41rem;
+        left: 60rem;
+        width: 50%;
+    }
+
+    main div:nth-of-type(2) p:nth-of-type(1) {
+        position: absolute;
+        top: -25rem;
+        left: 65rem;
+        width: 20%;
+    }
+
+    /* SHOP CONTAINER BUTTON EN TEKST*/
+    main div:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 0;
+    }
+
+    /* SHOP BUTTON */
+    main div:nth-of-type(3) button {
+        position: absolute;
+        top: -35rem;
+        left: 75.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.9rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px #C9C9C9;
+        z-index: 6;
+    }
+
+    /* SHOP TEKST */
+    main div:nth-of-type(3) h4 {
+        position: absolute;
+        top: -37rem;
+        left: 60rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    /********************* RETURNS *********************/
+    /* RETURN CONTAINER */
+    main section:nth-of-type(7) {
+        position: relative;
+        left: 24rem;
+        top: -25rem;
+        width: 27%;
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    /* RETURN LINKS */
+    main section:nth-of-type(7) a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+
+
+    /********************* TWEEDE SLIDER *********************/
+    /* CONTAINER TWEEDE SLIDER*/
+    main section:nth-of-type(8) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 30rem;
+        margin-left: 5%;
+        margin-bottom: 12rem;
+    }
+
+    main section:nth-of-type(8) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 28%;
+        height: 200px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    main section:nth-of-type(8) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST*/
+    /* WEDEROM EEN GEVALLETJE PLAKBANDJE 
+    JORDY LUKTE DIT OOK NIET */
+    main section:nth-of-type(8) figure div {
+        position: absolute;
+        top: 5rem;
+    }
+
+    main section:nth-of-type(8) figure div h1 {
+        height: 2.7rem;
+    }
+
+    main section:nth-of-type(8) figure div h1:nth-of-type(2) {
+        margin-bottom: 1.7rem;
+    }
+
+    main section:nth-of-type(8) figure div a:nth-of-type(1) {
+        height: 1.1rem;
+    }
+
+
+    /********************* FORMULIER *********************/
+    main section:nth-of-type(9) {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+
+    main section:nth-of-type(9) form {
+        display: grid;
+        width: 20%;
+        height: 30rem;
+    }
+
+    main section:nth-of-type(9) form fieldset {
+        border: 0;
+    }
+
+    /* SOORT VAN HEADING */
+    main section:nth-of-type(9) form fieldset legend {
+        font-family: 'IBM Plex Sans', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+
+    /*CONTAINER LABEL EN INPUT*/
+    main section:nth-of-type(9) form p {
+        margin: 0 auto;
+    }
+
+    /* LABEL */
+    main section:nth-of-type(9) form label {
+        display: block;
+        font-size: 1rem;
+        padding: 1rem 0rem 0rem 0rem;
+    }
+
+    /* INPUT */
+    main section:nth-of-type(9) form input {
+        width: 100%;
+        height: 40px;
+        font-size: 1rem;
+        border: 1px #EAEAEA solid;
+        border-radius: 25px;
+        padding-left: 1rem;
+    }
+
+    /* FORM BUTTON */
+    main section:nth-of-type(9) form button {
+        width: 20rem;
+        height: 40px;
+        font-size: 1rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.5rem;
+        margin-top: 3rem;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+
+
+    /********************* SOCIAL LINKS *********************/
+    /* CONTAINER SOCIAL LINKS */
+    main article:nth-of-type(4) {
+        display: flex;
+        justify-content: space-between;
+        width: 14%;
+        height: 8rem;
+        margin-left: 43.5%;
+    }
+
+    /* SOCIAL LINKS FOTO */
+    main article:nth-of-type(4) img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    /********************* FOOTER *********************/
+    /* FOOTER CONTAINER */
+    footer {
+        width: 46%;
+        height: 4rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    /* LINKS */
+    footer a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem
+    }
+
+
+
+
+
+
+
+    /******************************* PAGINA 2 *******************************/
+    /********************* EERSTE FOTO PAG2 *********************/
+    /* CONTAINER VOOR EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) {
+        max-width: 97%;
+        height: 44rem;
+        margin-left: 1.5%;
+    }
+
+    /* EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) img:nth-of-type(2) {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 6rem;
+    }
+
+    /* EERSTE FOTO PAG2 */
+    .pagina2 div:nth-of-type(1) img:nth-of-type(1) {
+        display: none;
+    }
+
+
+    /********************* EERSTE SLIDER *********************/
+    /* CONTAINER EERSTE SLIDER */
+    .pagina2 section:nth-of-type(1) {
+        position: relative;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        width: 95%;
+        height: 35rem;
+        margin-left: 5%;
+        margin-bottom: 10rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure {
+        display: inline-block;
+        object-fit: cover;
+        width: 28%;
+        height: 200px;
+        margin: 0rem 1.5rem 0rem 0rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure img {
+        width: 90%;
+    }
+
+    /* SLIDER TEKST*/
+    /* DIT MOET EVEN MET EEN PAAR STUKJES PLAKBAND
+    WANT HIJ DOET NIKS ME EEN MAX WIDTH
+    HEB JORDY INGESCHAKELD EN OOK DIE LUKTE HET NIET
+    DUS ALLES AAN GEDAAN !!1!!1*/
+    .pagina2 section:nth-of-type(1) figure div {
+        position: absolute;
+        top: 6rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div h1 {
+        height: 2.7rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div h1:nth-of-type(2) {
+        margin-bottom: 1.5rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(2) {
+        margin-top: -1.7rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(5) {
+        margin-top: 0;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(7) {
+        margin-top: 1.5rem;
+    }
+
+    .pagina2 section:nth-of-type(1) figure div p:nth-of-type(11) {
+        margin-bottom: 1.5rem;
+    }
+
+
+    /********************* KLEUR VAKKEN EN TEKST *********************/
+    /* KERST 1 VAK FOTO */
+    .pagina2 section:nth-of-type(2) {
+        position: relative;
+        width: 100%;
+        height: 14rem;
+    }
+
+    .pagina2 section:nth-of-type(2) img:nth-of-type(1) {
+        position: absolute;
+        top: 0;
+        left: 53rem;
+        width: 30rem;
+    }
+
+    .pagina2 section:nth-of-type(2) h3 {
+        position: absolute;
+        top: 17rem;
+        right: 15rem;
+        z-index: 10;
+    }
+
+
+    /* KERST 1 VAK TEKST */
+    .pagina2 article:nth-of-type(1) {
+        position: relative;
+        left: 17rem;
+        width: 18%;
+        height: 37rem;
+    }
+
+    .pagina2 article:nth-of-type(1) h1 {
+        position: absolute;
+        top: 0rem;
+        width: 14rem;
+        line-height: 2.5rem;
+    }
+
+    .pagina2 article:nth-of-type(1) p:nth-of-type(1) {
+        position: absolute;
+        top: 7rem;
+    }
+
+    .pagina2 article:nth-of-type(1) p:nth-of-type(2) {
+        position: absolute;
+        top: 13rem;
+    }
+
+
+    /********************* SHOP *********************/
+    /* SHOP CONTAINER */
+    .pagina2 section:nth-of-type(3) {
+        position: relative;
+        background-color: #313131;
+        width: 50%;
+        height: 50em;
+    }
+
+    /* SHOP TEKST 1 */
+    .pagina2 section:nth-of-type(3) h1:nth-of-type(1) {
+        position: absolute;
+        top: 4.5rem;
+        left: 8rem;
+        color: #ffffff;
+    }
+
+    /* SHOP TEKST 2*/
+    .pagina2 section:nth-of-type(3) h1:nth-of-type(2) {
+        position: absolute;
+        top: 7rem;
+        left: 8rem;
+        color: #989898;
+    }
+
+    /* SHOP FOTO FLES*/
+    .pagina2 section:nth-of-type(3) img {
+        position: absolute;
+        max-width: 16rem;
+        top: 7rem;
+        left: 40.5rem;
+    }
+
+    /* SHOP FOTO CONTAINER*/
+    .pagina2 div:nth-of-type(2) {
+        position: relative;
+        width: 86%;
+        height: 34em;
+        left: 1rem;
+    }
+
+    .pagina2 div:nth-of-type(2) img:nth-of-type(1) {
+        position: absolute;
+        top: 0;
+        left: 60rem;
+        width: 50%;
+    }
+
+    .pagina2 div:nth-of-type(2) p:nth-of-type(1) {
+        position: absolute;
+        top: -25rem;
+        left: 65rem;
+        width: 20%;
+    }
+
+    /* SHOP CONTAINER BUTTON EN TEKST*/
+    .pagina2 div:nth-of-type(3) {
+        position: relative;
+        width: 100%;
+        height: 0;
+    }
+
+    /* SHOP BUTTON */
+    .pagina2 div:nth-of-type(3) button {
+        position: absolute;
+        top: -35rem;
+        left: 75.5rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        background-color: #272727;
+        color: white;
+        border: none;
+        padding: 0.9rem 1.8rem;
+        font-size: 14px;
+        border-radius: 25px;
+        box-shadow: 5px 5px 10px #C9C9C9;
+        z-index: 6;
+    }
+
+    /* SHOP TEKST */
+    .pagina2 div:nth-of-type(3) h4 {
+        position: absolute;
+        top: -37rem;
+        left: 60rem;
+        letter-spacing: 1.5px;
+    }
+
+
+    /********************* RETURNS *********************/
+    /* RETURN CONTAINER */
+    .pagina2 section:nth-of-type(4) {
+        position: relative;
+        left: 24rem;
+        top: -25rem;
+        width: 27%;
+        height: 3.5rem;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    /* RETURN LINKS */
+    .pagina2 section:nth-of-type(4) a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 0.7rem;
+        font-weight: 300;
+        line-height: 1rem;
+    }
+
+
+    /********************* SOCIAL LINKS *********************/
+    /* CONTAINER SOCIAL LINKS */
+    .pagina2 article:nth-of-type(2) {
+        display: flex;
+        justify-content: space-between;
+        width: 14%;
+        height: 8rem;
+        left: 41.5rem;
+    }
+
+    /* SOCIAL LINKS FOTO */
+    .pagina2 article:nth-of-type(2) img {
+        width: 50px;
+        height: 50px;
+    }
+}
